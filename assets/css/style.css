@@ -32,7 +32,7 @@ header {
 }
 
 .container {
-    max-width:1440px;
+    max-width:970px;
     margin:0 4%; 
     display: flex;       
     justify-content: center;
@@ -41,12 +41,15 @@ header {
    
 }
 .header-box {
-    width:  100%;
-    height: auto;  
+    width:90%;
+    height: 2.5rem;  
     display: flex;
     justify-content: space-between;    
     align-items: center;
-    margin-top: 3rem;
+    position: absolute;
+    top:5rem;    
+    z-index:1000;
+    
        
 }
 .right-box ul {
@@ -65,7 +68,7 @@ header .right-box li {
 }
 .header-box .right-box .btn {
     background-color: #fff;
-    padding:1rem 3rem;
+    padding:0.8rem 3rem;
     border-radius:2rem;
     color:#292D36;
     font-family: var(--font2);
@@ -81,20 +84,21 @@ header .right-box li {
     position:relative; 
     flex-direction: column;
     justify-content: center;
+    margin:auto;
     
 }
 .banner_text {
+    width:100%;    
     align-items: center;
     display: flex;    
     justify-content: center;
     position: absolute;
-    top:10rem;
-    text-align:center;   
+    top:15rem;       
     color: #fff;
     
 }
 .banner_text h1 {
-    font-size: 4rem;
+    font-size: 5rem;
 }
 section .banner_img {
     width:100%;
