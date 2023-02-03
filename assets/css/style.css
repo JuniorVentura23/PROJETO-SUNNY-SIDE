@@ -93,6 +93,7 @@ header-nav {
 .header-nav .menu li {   
     text-decoration: none;
     margin-left:2.6rem;
+    
 }
 .header-box .menu ul a {
     color:#fff;
@@ -101,9 +102,13 @@ header-nav {
     padding:0.8rem 1.5rem;
     text-decoration:none;    
     display: inline-block;
+    border:2.5px solid transparent;
+    border-radius:20px;
 }
 .header-box .menu ul a:hover {
-    color:var(--dark_blue);  
+    color:var(--dark_blue);
+    border:2.5px solid var(--dark_blue);
+    border-radius:20px;  
     
 }
 .header-box .menu .btn {
@@ -120,6 +125,8 @@ header-nav {
     background: -webkit-linear-gradient(to right, #f5af19, #f12711);
     background: linear-gradient(to right, #f5af19, #f12711);
     color:#fff;
+    border:2.5px solid #3DBEFF;
+    
 }
 
 /* style banner start */
@@ -169,6 +176,7 @@ header-nav {
 }
 .grid p {
     font-family: var(--font1);
+    font-weight: 600;
     font-size:2rem;
     color:#83818E;
     padding:3.5rem 0;
@@ -214,24 +222,103 @@ header-nav {
     background-image: url(..//images/desktop/image-photography.jpg);
     background-repeat:no-repeat;
     background-size:cover;
-    background-position: center;
-    
-    
+    background-position: center;    
 }
-.p-center {
+.grid .red-border {
+    border-bottom:2px solid var(--softred);
+}
+.grid .p-center {
     font-family: var(--font1);
+    color:var(--dark_desat_cyan);
     font-size:1.6rem;
     text-align: center;   
 }
-
-
-
-
-
-
-
-
 /* section grid end */
+
+
+
+/* section client testimonials start */
+
+.section-clientstest {
+    width:100%;
+    height:auto;
+    padding:9rem;    
+}
+.area-clients {
+    width:100%;
+    justify-content: center; 
+    text-align: center;
+}
+.area-title {  
+    width:100%; 
+    height:auto;    
+    align-items: center;
+    padding:3rem 1.5rem;
+    
+}
+.area-title h1 {
+    font-family: var(--font2);
+    font-size:2.5rem;
+    font-weight:900;
+    color:#292D36;    
+    text-transform: uppercase;
+}
+.area-testimonial {
+    display: flex;
+    justify-content: center;
+    padding:12px 12px 18px 12px;
+    
+}
+.people {
+    
+    width:100%;
+    height:auto;
+    margin:1px;
+    padding:4rem;
+    border:3px solid #56B4D3;
+    border-radius: 20px;
+    
+    
+}
+.people:hover {    
+    background: #348F50;
+    background: -webkit-linear-gradient(to right, #56B4D3, #348F50);
+    background: linear-gradient(to right, #56B4D3, #348F50); 
+    border:3px solid #56B4D3;
+    border-radius: 20px;  
+    
+}
+.people img {
+    width:9rem;
+    height:9rem;
+    border-radius:50px;
+    margin-top:30px;
+    margin-bottom:50px;
+}
+.people p {
+    font-family: var(--font1);
+    font-size:1.5rem;
+    color:#83818E;
+    padding:2.5rem 0.5px;
+    line-height: 2.4rem;
+}
+.people:hover p,
+.people:hover .responsability {
+    color:#fff;
+}
+.people h5 {
+    font-family: var(--font2);
+    font-size: 1.7rem;
+    font-weight: 700;
+    color:#000;
+}
+.people .responsability {
+    font-size:1.4rem;
+    padding-top:0.6rem;
+}
+
+/* section client testimonials end */
+
 
 
 /* responsividade */  
@@ -239,12 +326,14 @@ header-nav {
     .content-container {
         display:grid;
         grid-template-columns:repeat(auto-fit, minmax(40rem, 2fr));   
-        }  
+        }
+        
     
 }
 @media (max-width:768px) {
     html {
         font-size:55%;
+        
     }
     .content-container {
         display:grid;
@@ -258,15 +347,24 @@ header-nav {
     }
     .grid p {
         font-size:1.6rem;
+    }
+    .area-testimonial {
+        flex-direction: column;
+    }
+    
 
-}
+
 @media (max-width:670px) {
+    html {
+        font-size:50%;
+    }
     .content-container {
         display:grid;
         grid-template-columns:repeat(auto-fit, minmax(50rem, 2fr));   
     }    
     .header-box {
         width:90%;
+        overflow-x: hidden;
     }
     .icon {        
         margin-left: -11rem;
@@ -289,10 +387,23 @@ header-nav {
         font-size: 1.5rem;
         color: #83818E;
         padding: 1.5rem 0;
-        line-height: 2.4rem;
-        
+        line-height: 2.4rem;        
+    }
+    .area-testimonial {
+        flex-direction: column;
     }
     
+}
+@media (max-width:375px) {
+    html {
+        font-size:30%;
+    }
+    
+    .header-box {
+        overflow-x: hidden;
+        text-align: center;
+        
+    }   
 }
 
 
