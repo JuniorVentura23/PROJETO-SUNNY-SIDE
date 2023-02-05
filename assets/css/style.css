@@ -39,7 +39,7 @@ header-nav {
 }
 .header-box {
     width: 100%;
-    height: 2.5rem;  
+    height: 2.5rem;     
     display: flex;
     justify-content: space-between;    
     align-items: center;
@@ -73,6 +73,7 @@ header-nav {
     display: flex;
     justify-content: center;          
 }
+
 .menu nav ul a {
     margin-left:0.3rem;
 }
@@ -128,6 +129,75 @@ header-nav {
     border:2.5px solid #3DBEFF;    
 }
 
+/*aside bar style start*/
+/*.menu-bar {
+    width:100%;
+    height:500px;
+    font-size: 2rem;    
+    color:#fff;
+    background: #f12711;
+    display:block;
+    justify-content: center;
+    text-align: center;
+    position:absolute;
+    left:-130px;
+    top:0;    
+    transition: translateX(0) 1s ease;
+} */
+
+.menu-bar {
+    width: 50%;
+    height: 100%;
+    font-size: 2rem;
+    color: #fff;
+    
+    display: block;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    left: -589px;
+    top: 0;
+    transition: translate(0);
+    z-index: 1000;
+    
+}
+.menu-bar.active {
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    color: #fff;
+    background: #f12711;
+    background: -webkit-linear-gradient(to right, #f5af19, #f12711);
+    background: linear-gradient(to right, #f5af19, #f12711);
+    display: block;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: translate(0);
+    z-index: 2;
+}
+.menu-bar ul  {
+    font-size:3.5rem;
+    color:#fff;
+    list-style: none;
+    line-height: 8rem;
+    position:relative;
+    top:30%;
+    margin-top:60px;  
+}
+.menu-bar ul a {
+    color:#fff;
+    font-size: 5rem;
+    font-family: var(--font1);
+    text-decoration: none;
+    margin:5rem 0;
+}
+
+/*aside bar style end*/
+
+
 
 /* style banner start */
 .banner-pri {
@@ -137,6 +207,7 @@ header-nav {
     background-size: cover;
     background-repeat: no-repeat;
     background-position:center;
+    position: relative;
 }
 
 .banner_text {
